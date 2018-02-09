@@ -6,7 +6,7 @@
  * @param  {Number} n Greater than 3 && Prime number (3,5,7,11,...)
  * @return {Array} output
  */
-export default (n = 3) => {
+export function generate(n = 3) {
 
     if (n < 3) {
         throw new Error('Invalid number');

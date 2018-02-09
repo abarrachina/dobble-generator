@@ -1,11 +1,11 @@
 import assert from 'assert';
-import generator from '../src/generator';
+import { generate } from '../src/generator';
 
 describe('generator', () => {
 
     it('Output with 4 symbols by card', function() {
 
-        const cards = generator(3);
+        const cards = generate(3);
         
         assert.deepEqual(cards, [
             [ 0, 1, 2, 3 ],
@@ -28,7 +28,7 @@ describe('generator', () => {
 
         const n = 7;
 
-        const cards = generator(n);
+        const cards = generate(n);
 
         assert.equal(cards.length, n * (n + 1) + 1);
     });
@@ -37,7 +37,7 @@ describe('generator', () => {
 
         const n = 7;
 
-        const cards = generator(n);
+        const cards = generate(n);
 
         let numbers = {};
 
@@ -62,7 +62,7 @@ describe('generator', () => {
 
         const n = 7;
 
-        const cards = generator(n);
+        const cards = generate(n);
 
         cards.forEach(function (v1, i1) {
 
