@@ -1,12 +1,17 @@
 {
   "name": "dobble-generator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "scripts": {
-    "test": "mocha --require babel-core/register"
+    "build": "babel src -d dist",
+    "test": "mocha --require babel-core/register",
+    "prepublish": "npm run build"
   },
   "babel": {
-    "presets": ["es2015", "stage-2"]
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -14,5 +19,28 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "mocha": "^5.0.0"
-  }
+  },
+  "description": "Generate a dobble card game. Uses the finished geometry.",
+  "main": "/dist/generator.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mons54/dobble-generator.git"
+  },
+  "keywords": [
+    "dobble",
+    "dobble",
+    "generator",
+    "finished",
+    "geometry"
+  ],
+  "author": "Julien Simonet <j.mons54@gmail.com> (http://playingcardapp.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mons54/dobble-generator/issues"
+  },
+  "homepage": "https://github.com/mons54/dobble-generator#readme"
 }
