@@ -1,6 +1,6 @@
 {
   "name": "dobble-generator",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": false,
   "scripts": {
     "build": "babel src -d dist",
@@ -21,7 +21,7 @@
     "mocha": "^5.0.0"
   },
   "description": "Generate a dobble card game. Uses the finished geometry.",
-  "main": "/dist/generator.js",
+  "main": "./dist/generator.js",
   "directories": {
     "test": "test"
   },
