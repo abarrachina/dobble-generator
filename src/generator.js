@@ -3,18 +3,18 @@
 /**
  * Objective have x cards with one number in common by card
  * This algo is valid only if n = prime number
- * @param  {Number} n Greater than 3 && Prime number (3,5,7,11,...)
+ * @param  {Number} n Greater than 0 && 1 or prime number (2,3,5,7,11,13,..)
  * @return {Array} output
  */
 export function generate(n = 3) {
 
-    if (n < 3) {
-        throw new Error('Invalid number');
+    if (n < 1) {
+        throw new Error('The number must be greater than 0');
     }
 
     for (let i = 2; i < n; i++) {
         if (n % i === 0) {
-            throw new Error('Invalid number');
+            throw new Error('The number must be 1 or prime number (2,3,5,7,11,13,..)');
         }
     }
 
